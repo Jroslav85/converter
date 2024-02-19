@@ -9,5 +9,4 @@ public class HexNumberValidator implements Validator {
 		}
 		return false;
 	}
-
 }

@@ -2,10 +2,6 @@ package program.converter.normalizer;
 
 public class BinaryNormalizer implements Normalizer {
 
-	public BinaryNormalizer() {
-		
-	}
-	
 	@Override
 	public String getCorrectNumber(String number){
 		int lengthDivisibleByFour = number.length() % 4;

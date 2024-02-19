@@ -38,5 +38,4 @@ public class BinaryToHexConverter implements Converter {
 		String resultHex = hexString.toString();
 		return resultHex;
 	}
-
 }

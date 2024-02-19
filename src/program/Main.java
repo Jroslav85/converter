@@ -27,7 +27,6 @@ public class Main {
 			}
 			System.out.printf("Двоичное число 0b%s равно шестнадцатеричному числу 0x%s  %n%n", binaryNumber, hexResult);
 			
-			
 			// ввод шестнадцатеричного числа.
 			// ввывод результата конвертации 16-ричного числа.
 			System.out.println("Введите шестнадцатеричное число");
@@ -46,7 +45,4 @@ public class Main {
 			System.out.printf("Шестнадцатеричное число 0x%s равно двоичному числу 0b%s ", hexNumber, binaryResult);
 		}
 	}
-
-	
-
 }
