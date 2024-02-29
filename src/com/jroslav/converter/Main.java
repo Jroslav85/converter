@@ -38,7 +38,7 @@ public class Main {
 				binaryResult = new HexToBinaryConverter().convert(hexNumber);
 				break;
 			} catch (RuntimeException e) {
-				System.out.println("введите еще раз");
+				System.out.println("введите еще раз.");
 			}
 		}
 	}
@@ -50,7 +50,7 @@ public class Main {
 				hexResult = new BinaryToHexConverter().convert(binaryNumber);
 				break;
 			} catch (RuntimeException e) {
-				System.out.println("введите еще раз");
+				System.out.println("введите еще раз.");
 			}
 		}
 	}
