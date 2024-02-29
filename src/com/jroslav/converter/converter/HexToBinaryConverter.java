@@ -23,7 +23,7 @@ public class HexToBinaryConverter implements Converter {
 		getNumberResult(hexNumber);
 
 		StringBuilder binaryString = new StringBuilder();
-		String[] hexArray = hexNumber.split("");
+		String[] hexArray = hexNumber.toLowerCase().split("");
 		for (String str : hexArray) {
 			binaryString.append(MASK_HEX.get(str));
 		}
