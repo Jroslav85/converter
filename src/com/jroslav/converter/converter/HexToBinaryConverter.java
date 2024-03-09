@@ -4,11 +4,14 @@ import static java.util.Map.entry;
 
 import java.util.Map;
 
-import com.jroslav.converter.converter.validator.HexNumberValidator;
+import com.jroslav.converter.converter.normalizer.Normalizer;
 import com.jroslav.converter.converter.validator.Validator;
 
-public class HexToBinaryConverter implements Converter {
-	private Validator validator = HexNumberValidator.getValidator();
+public class HexToBinaryConverter extends AbstractConverter {
+
+	public HexToBinaryConverter(Validator validator, Normalizer normalizer) {
+		super(validator, normalizer);
+	}
 
 	private static final Map<String, String> MASK_HEX = Map.ofEntries(
 			entry("0", "0000"), entry("1", "0001"), entry("2", "0010"),
@@ -20,20 +23,13 @@ public class HexToBinaryConverter implements Converter {
 
 	@Override
 	public String convert(String hexNumber) throws RuntimeException {
-		getNumberResult(hexNumber);
+		hexNumber = getNumberResult(hexNumber);
 
 		StringBuilder binaryString = new StringBuilder();
-		String[] hexArray = hexNumber.toLowerCase().split("");
+		String[] hexArray = hexNumber.split("");
 		for (String str : hexArray) {
 			binaryString.append(MASK_HEX.get(str));
 		}
 		return binaryString.toString();
-	}
-
-	private void getNumberResult(String hexNumber) {
-		boolean idValid = validator.validate(hexNumber);
-		if (!idValid) {
-			throw new RuntimeException();
-		}
 	}
 }
