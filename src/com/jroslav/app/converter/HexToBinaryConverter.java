@@ -1,11 +1,11 @@
-package com.jroslav.converter.converter;
+package com.jroslav.app.converter;
 
 import static java.util.Map.entry;
 
 import java.util.Map;
 
-import com.jroslav.converter.converter.normalizer.Normalizer;
-import com.jroslav.converter.converter.validator.Validator;
+import com.jroslav.app.converter.normalizer.Normalizer;
+import com.jroslav.app.converter.validator.Validator;
 
 public class HexToBinaryConverter extends AbstractConverter {
 

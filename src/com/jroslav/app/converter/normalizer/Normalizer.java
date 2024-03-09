@@ -1,4 +1,4 @@
-package com.jroslav.converter.converter.normalizer;
+package com.jroslav.app.converter.normalizer;
 
 public interface Normalizer {
 

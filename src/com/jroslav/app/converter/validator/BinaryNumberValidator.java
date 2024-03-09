@@ -1,4 +1,4 @@
-package com.jroslav.converter.converter.validator;
+package com.jroslav.app.converter.validator;
 
 public class BinaryNumberValidator implements Validator {
 

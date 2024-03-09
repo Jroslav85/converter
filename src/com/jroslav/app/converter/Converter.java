@@ -1,4 +1,4 @@
-package com.jroslav.converter.converter;
+package com.jroslav.app.converter;
 
 public interface Converter {
 	

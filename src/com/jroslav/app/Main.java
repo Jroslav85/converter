@@ -2,15 +2,15 @@ package com.jroslav.app;
 
 import java.util.Scanner;
 
-import com.jroslav.converter.converter.BinaryToHexConverter;
-import com.jroslav.converter.converter.Converter;
-import com.jroslav.converter.converter.HexToBinaryConverter;
-import com.jroslav.converter.converter.normalizer.BinaryNormalizer;
-import com.jroslav.converter.converter.normalizer.HexNormalizer;
-import com.jroslav.converter.converter.normalizer.Normalizer;
-import com.jroslav.converter.converter.validator.BinaryNumberValidator;
-import com.jroslav.converter.converter.validator.HexNumberValidator;
-import com.jroslav.converter.converter.validator.Validator;
+import com.jroslav.app.converter.BinaryToHexConverter;
+import com.jroslav.app.converter.Converter;
+import com.jroslav.app.converter.HexToBinaryConverter;
+import com.jroslav.app.converter.normalizer.BinaryNormalizer;
+import com.jroslav.app.converter.normalizer.HexNormalizer;
+import com.jroslav.app.converter.normalizer.Normalizer;
+import com.jroslav.app.converter.validator.BinaryNumberValidator;
+import com.jroslav.app.converter.validator.HexNumberValidator;
+import com.jroslav.app.converter.validator.Validator;
 
 public class Main {
 	public static String binaryNumber;
