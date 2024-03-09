@@ -1,19 +1,7 @@
 package com.jroslav.converter.converter.normalizer;
 
 public class BinaryNormalizer implements Normalizer {
-	private static Normalizer normalizer = null;
 
-	private BinaryNormalizer() {
-
-	}
-
-	public static Normalizer getNormalizer() {
-		if (normalizer == null) {
-			normalizer = new BinaryNormalizer();
-		}
-		return normalizer;
-	}
-	
 	@Override
 	public String normalize(String number) {
 		int lengthDivisibleByFour = number.length() % 4;
