@@ -1,4 +1,4 @@
-package com.jroslav.app.converter.normalizer;
+package com.jroslav.converter.normalizer;
 
 public class BinaryNormalizer implements Normalizer {
 
