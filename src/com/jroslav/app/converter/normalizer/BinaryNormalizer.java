@@ -1,5 +1,6 @@
 package com.jroslav.app.converter.normalizer;
 
+// FIXME: 13.03.2024 выглядит, будто нормализаторы и валидаторы должны быть вне пакета convertor
 public class BinaryNormalizer implements Normalizer {
 
 	@Override

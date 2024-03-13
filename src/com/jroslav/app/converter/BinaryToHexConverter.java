@@ -23,10 +23,12 @@ public class BinaryToHexConverter extends AbstractConverter {
 
 	@Override
 	public String convert(String binaryNumber) throws RuntimeException {
+		// FIXME: 13.03.2024 Изменять значение параметра внутри метода - плохая практика
 		binaryNumber = getNumberResult(binaryNumber);
 		StringBuilder hexString = new StringBuilder();
 		String[] binaryArray = binaryNumber.split("(?<=\\G.{" + 4 + "})");
 
+		// FIXME: 13.03.2024 можно заменить на foreach
 		for (int i = 0; i < binaryArray.length; i++) {
 			String str = binaryArray[i];
 			hexString.append(MASK_BIN.get(str));

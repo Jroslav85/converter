@@ -1,4 +1,5 @@
 package com.jroslav.app;
+// FIXME: 13.03.2024 app - неудачное название для апликухи:) лучше уже converter или numberconvertor
 
 import java.util.Scanner;
 
@@ -13,6 +14,7 @@ import com.jroslav.app.converter.validator.HexNumberValidator;
 import com.jroslav.app.converter.validator.Validator;
 
 public class Main {
+	// FIXME: 13.03.2024 статик-поля здесь не нужен. И конкретно в таком виде - плохая практика
 	public static String binaryNumber;
 	public static String hexResult;
 	public static String hexNumber;
@@ -41,19 +43,25 @@ public class Main {
 	private static String convertHex(Scanner console) {
 		while (true) {
 			try {
+				// FIXME: 13.03.2024 Нелогично. Если метод convert() - он должен на вход принимать уже число,
+				//  а не строго определенный источник ввода (сканер)
 				hexNumber = console.nextLine();
 				Validator validator = new HexNumberValidator();
 				Normalizer normalizer = new HexNormalizer();
 				Converter converter = new HexToBinaryConverter(validator,
+						// FIXME: 13.03.2024 вполне помещалось на предыдущей строке
 						normalizer);
 				return converter.convert(hexNumber);
 			} catch (RuntimeException e) {
+				// FIXME: 13.03.2024 Если пытаешься в юзабилити - где аварийный выход?)
+				//  Например, не нужно мне больше 16ричное число конвертить
 				System.out.println("введите еще раз.");
 			}
 		}
 	}
 
 	private static String convertBinary(Scanner console) {
+		// FIXME: 13.03.2024 замечания аналогичны тем, что выше
 		while (true) {
 			try {
 				binaryNumber = console.nextLine();
