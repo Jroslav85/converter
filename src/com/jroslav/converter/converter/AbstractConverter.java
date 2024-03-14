@@ -12,12 +12,17 @@ public abstract class AbstractConverter {
 		this.normalizer = normalizer;
 	}
 
-	protected String prepareNumber(String number)throws RuntimeException {
+	public String prepareNumber(String number) {
+		isValid(number);
+		return normalizer.normalize(number);
+	}
+
+	private boolean isValid(String number) throws RuntimeException {
 		boolean idValid = validator.validate(number);
 		if (!idValid) {
 			throw new RuntimeException("неправильный ввод числа. Введите еще раз.");
 		}
-		return normalizer.normalize(number);
+		return idValid;
 	}
 
 	public abstract String convert(String value) throws RuntimeException;

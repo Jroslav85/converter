@@ -55,17 +55,17 @@ public class Main {
 		}
 	}
 
-	private static String convertBinary(String binaryNumber) throws RuntimeException {
+	private static String convertBinary(String binaryNumber) {
 		Validator validator = new BinaryNumberValidator();
 		Normalizer normalizer = new BinaryNormalizer();
 		AbstractConverter converter = new BinaryToHexConverter(validator, normalizer);
-		return converter.convert(binaryNumber);
+		return converter.convert(converter.prepareNumber(binaryNumber));
 	}
 
 	private static String convertHex(String hexNumber) {
 		Validator validator = new HexNumberValidator();
 		Normalizer normalizer = new HexNormalizer();
 		AbstractConverter converter = new HexToBinaryConverter(validator, normalizer);
-		return converter.convert(hexNumber);
+		return converter.convert(converter.prepareNumber(hexNumber));
 	}
 }
