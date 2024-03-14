@@ -1,4 +1,4 @@
-package com.jroslav.converter.converter.validator;
+package com.jroslav.converter.validator;
 
 public interface Validator {
 	
