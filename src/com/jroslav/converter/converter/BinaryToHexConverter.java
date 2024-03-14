@@ -23,6 +23,7 @@ public class BinaryToHexConverter extends AbstractConverter {
 	@Override
 	public String convert(String binaryNumber) throws RuntimeException {
 		binaryNumber = prepareNumber(binaryNumber);
+		
 		StringBuilder hexString = new StringBuilder();
 		String[] binaryArray = binaryNumber.split("(?<=\\G.{" + 4 + "})");
 

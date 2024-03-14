@@ -31,7 +31,7 @@ public class Main {
 							binaryNumber, hexResult
 					);
 				} catch (RuntimeException e) {
-					System.out.println("введите еще раз.");
+					System.out.println(e.getMessage());
 				}
 			}
 
@@ -49,7 +49,7 @@ public class Main {
 							binaryResult
 					);
 				} catch (RuntimeException e) {
-					System.out.println("введите еще раз.");
+					System.out.println(e.getMessage());
 				}
 			}
 		}
